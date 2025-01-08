@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>لجان نادي أدِيب</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css'>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="parent">
+                <div class="top-div">
+                   <img src="logo.png" alt="">
+                </div>
+                <!-- <ul class="progress-bar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul> -->
+            </div> 
+
+            <form method="post" action="https://script.google.com/macros/s/AKfycbye3oQ09MACM_-1TmngyIS8bRDMIBfFV58L70_9TKDIc5BpeiVceMjICVIR4Sgtl02cNA/exec" name="MyGroup">
+
+            <div class="main active">
+
+                <div class="content">
+                  <h4>  ما مصير عضويتك الأديبية🤔؟   </h4>
+                  <p>  
+                    يجب إكمال جميع الحقول
+                 </p>
+               </div> 
+
+               <div class="input-text">
+                <input id="input" type="text" placeholder=" أكتب أسمك هُنا "  name="الأسم الثلاثي" require>
+                <span> ✍🏻الأسم الثلاثي </span>
+            </div>
+
+               <div class="radio-wrapper-22">
+                 <label id="pepole" class="radio-wrapper" for="example-22">
+                   <input type="radio" class="radio-input" name="العضوية" id="example-22" value="خروج"/>
+                   <span class="radio-tile">
+                     <span class="radio-icon">
+                      <i class="fa-solid fa-circle-xmark"></i>
+                     </span>
+                     <span class="radio-label">إلغاء العضوية</span>
+                   </span>
+                 </label>
+
+                 <label id="writing" class="radio-wrapper" for="example-33">
+                   <input type="radio" class="radio-input" name="العضوية" id="example-33" value="تجديد"/>
+                   <span class="radio-tile">
+                     <span class="radio-icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                     </span>
+                     <span class="radio-label">تجديد العضوية</span>
+                   </span>
+                 </label>
+               </div>
+
+                <div class="button">
+                    <button type="submit" value="Submit" class="create-workspace"> توكلنا على الله </button>
+                </div>
+            </div> 
+
+
+
+            <div class="main">
+
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+                <div class="content">
+                   <h2 style="color: #335C81;"> خلصنا، تقدر ترجع الريشة للمحبرة </h2>
+                   <p> 
+                     👋🏻نراك قريبًا 
+                  </p>
+                </div>
+
+                <div class="finish">
+                  <button class="group">  <a href="index.html">تسجيل عضوية جديده</a></button>
+              <button class="twitter">     <a href="https://chat.whatsapp.com/FsgdBOlOohd0sEsSyrBF3l" target="_blank"> الرجوع للبيت   </a></button>
+                
+                  <!-- <a href="https://twitter.com/AB_KFU" target="_blank" class="twitter">الذهاب إلى تويتر</a>
+                  <a href="https://web.telegram.org/a/#-1001825412173" target="_blank" class="group">الرجوع الى القروب</a> -->
+
+              </div>
+
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+      <script src="script.js"></script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbye3oQ09MACM_-1TmngyIS8bRDMIBfFV58L70_9TKDIc5BpeiVceMjICVIR4Sgtl02cNA/exec'
+        const form = document.forms['MyGroup']
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          // .then(response => alert("Thank you! your form is submitted successfully." ))
+          // .then(() => {  window.location.reload(); })
+          // .catch(error => console.error('Error!', error.message))
+        })
+        </script>
+
+        <script>
+          function isChecked() {
+            if(document.getElementById("mobile").checked){
+              document.getElementById("result").style.display = 'block'
+            }
+            else{
+              document.getElementById("result").style.display = 'none'
+            }
+          }
+        </script>
+
+<!-- <script>
+  document.getElementById('pepole').addEventListener('click', function(){
+    Swal.fire({
+title: "لجنة السفراء",
+titleColor: "#335C81",
+text: "وهي اللجنة المسؤولة عن العلاقات العامة، سواءً كانت العلاقات العامة داخل أسوار الجامعة أو خارجها",
+confirmButtonColor: "#335C81",
+confirmButtonText: "فهمت",
+confirmButtonFont: "b",
+background: "#fff",
+color: "#335C81"
+});
+  })
+</script>
+
+        <script>
+          document.getElementById('writing').addEventListener('click', function(){
+            Swal.fire({
+  title: "لجنة التأليف",
+  titleColor: "#335C81",
+  text: "وهي اللجنة المسؤولة عن صناعة المحتوى، كـ الكتابة بِكافة أنواعها، ومنبع الأفكار الإبداعية",
+  confirmButtonColor: "#335C81",
+  confirmButtonText: "فهمت",
+  confirmButtonFont: "b",
+  background: "#fff",
+  color: "#335C81"
+});
+          })
+        </script>
+
+<script>
+  document.getElementById('mic').addEventListener('click', function(){
+    Swal.fire({
+title: "لجنة الرُواة",
+titleColor: "#335C81",
+text: "وهي اللجنة المعنية بِـ ضم المُتحدثين البارعين في الإلقاء والتقديم، وضم من يمتلكون ملكة التمثيل",
+confirmButtonColor: "#335C81",
+confirmButtonText: "فهمت",
+confirmButtonFont: "b",
+background: "#fff",
+color: "#335C81"
+});
+  })
+</script>
+
+<script>
+  document.getElementById('art').addEventListener('click', function(){
+    Swal.fire({
+title: "لجنة الفنون",
+titleColor: "#335C81",
+text: "وهي اللجنة المسؤولة عن أيّ إبداعٍ بصري، كالرسم بِكافة أنواعه، وصُنع الأعمال اليدوية المُتقنه",
+confirmButtonColor: "#335C81",
+confirmButtonText: "فهمت",
+confirmButtonFont: "b",
+background: "#fff",
+color: "#335C81"
+});
+  })
+</script>
+
+<script>
+  document.getElementById('media').addEventListener('click', function(){
+    Swal.fire({
+title: "لجنة الانتاج",
+titleColor: "#335C81",
+text: "وهي اللجنة المعنية بإبراز أدِيب إعلاميًا من خلال المهارات الإبداعية، كالتصوير، التصميم، المُونتاج والإخراج",
+confirmButtonColor: "#335C81",
+confirmButtonText: "فهمت",
+confirmButtonFont: "b",
+background: "#fff",
+color: "#335C81"
+});
+  })
+</script> -->
+
+      </body>
+</html>
