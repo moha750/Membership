@@ -946,6 +946,7 @@ input[type="color"] {
 .radio-wrapper-22 {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -989,9 +990,9 @@ input[type="color"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 130px;
+  width: 125px;
   min-height:75px;
-  margin: 10px 2px;
+  margin: 10px 0px;
   border-radius: 0.5rem;
   border: 2px solid hsla(208, 43%, 35%, 0.3);
   background-color: #fff;
